@@ -1,0 +1,409 @@
+Q1
+#include<stdio.h>
+int main()
+{
+	int num,j,flag=0;
+		printf("enter a number");
+		scanf("%d",&num);
+		
+		for(j=2;j<=num/2;++j)
+		{
+			if(num%j==0){
+				flag=1;
+				break;
+			}
+		}
+	if(num==1)
+	{
+		printf("%d is neither prime nor composite",num);
+	}
+	else
+	{
+	
+		if(flag==0)
+		{
+			printf("%d is prime number",num);
+		}
+		else
+		{
+			printf("%d is not a prime number",num);
+		}
+	}	
+	return 0;
+}
+__________________________________________________________________________
+
+Q2
+
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0)
+        printf("You entered a negative number.");
+    else if (num > 0)
+        printf("You entered a positive number.");
+    else
+        printf("You entered 0.");
+
+    return 0;
+}
+
+_________________________________________________________________________
+
+Q3
+
+class FactorialExample{  
+ public static void main(String args[]){  
+  int i,fact=1;  
+  int number=5;   
+  for(i=1;i<=number;i++){    
+      fact=fact*i;    
+  }    
+  System.out.println("Factorial of "+number+" is: "+fact);    
+ }  
+}  
+
+__________________________________________________________________________
+
+Q4
+
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        int n = 10, t1 = 0, t2 = 1;
+        System.out.print("First " + n + " terms: ");
+
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " + ");
+
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+____________________________________________________________________________
+
+Q7
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 5, b = 10, temp;
+
+    cout << "Before swapping." << endl;
+    cout << "a = " << a << ", b = " << b << endl;
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    cout << "\nAfter swapping." << endl;
+    cout << "a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
+______________________________________________________________________________
+Q8
+
+#include<stdio.h>  
+ int main()    
+{    
+int a=10, b=20;      
+printf("Before swap a=%d b=%d",a,b);      
+a=a+b;  
+b=a-b;  
+a=a-b;  
+printf("\nAfter swap a=%d b=%d",a,b);    
+return 0;  
+}  
+
+______________________________________________________________________________
+
+Q9
+
+#include <stdio.h>
+int main() {
+    char c;
+    int lcase_vowel, ucase_vowel;
+    printf("Enter an alphabet: ");
+    scanf("%c", &c);
+
+    lcase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+
+    ucase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+
+    if (lcase_vowel || ucase_vowel)
+        printf("%c is a vowel.", c);
+    else
+        printf("%c is a consonant.", c);
+    return 0;
+} 
+
+_________________________________________________________________________________
+
+Q10
+
+#include<stdio.h>
+int main()
+{
+int num1, num2;
+scanf(“%d %d”,&num1,&num2);
+if(num1 > num2)
+{ 
+printf(“%d is greater”,num1);
+}
+else
+{
+printf(“%d is greater”,num2);
+}
+return 0;
+}
+
+_____________________________________________________________________________________
+
+Q11
+
+public class ReverseNumber {
+
+    public static void main(String[] args) {
+
+        int num = 1234, reversed = 0;
+
+        while(num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+
+        System.out.println("Reversed Number: " + reversed);
+    }
+}
+
+_______________________________________________________________________________________
+
+Q12
+#include<stdio.h>  
+int main()    
+{    
+int n,r,sum=0,temp;    
+printf("enter the number=");    
+scanf("%d",&n);    
+temp=n;    
+while(n>0)    
+{    
+r=n%10;    
+sum=(sum*10)+r;    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("palindrome number ");    
+else    
+printf("not palindrome");   
+return 0;  
+}   
+________________________________________________________________________________________
+
+Q14
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int a, b, i, j, flag;
+ 
+    cout << "Enter lower bound of the interval: ";
+    cin >> a;
+ 
+    cout << "\nEnter upper bound of the interval: ";
+    cin >> b; 
+ 
+    cout << "\nPrime numbers between "
+         << a << " and " << b << " are: ";
+ 
+    for (i = a; i <= b; i++) {
+        
+        if (i == 1 || i == 0)
+            continue;
+ 
+        flag = 1;
+ 
+        for (j = 2; j <= i / 2; ++j) {
+            if (i % j == 0) {
+                flag = 0;
+                break;
+            }
+        }
+ 
+        if (flag == 1)
+            cout << i << " ";
+    }
+ 
+    return 0;
+}
+_____________________________________________________________________________________
+Q15
+#include <stdio.h>
+int main() {
+    int num, originalNum, remainder, result = 0;
+    printf("Enter a three-digit integer: ");
+    scanf("%d", &num);
+    originalNum = num;
+
+    while (originalNum != 0) {
+        remainder = originalNum % 10;
+        
+       result += remainder * remainder * remainder;
+        
+       originalNum /= 10;
+    }
+
+    if (result == num)
+        printf("%d is an Armstrong number.", num);
+    else
+        printf("%d is not an Armstrong number.", num);
+
+    return 0;
+}
+_____________________________________________________________________________________
+
+Q16
+#include <math.h>
+#include <stdio.h>
+
+int main() {
+   int num, originalNum, remainder, n = 0;
+   float result = 0.0;
+
+   printf("Enter an integer: ");
+   scanf("%d", &num);
+
+   originalNum = num;
+
+   for (originalNum = num; originalNum != 0; ++n) {
+       originalNum /= 10;
+   }
+
+   for (originalNum = num; originalNum != 0; originalNum /= 10) {
+       remainder = originalNum % 10;
+
+      result += pow(remainder, n);
+   }
+
+   if ((int)result == num)
+    printf("%d is an Armstrong number.", num);
+   else
+    printf("%d is not an Armstrong number.", num);
+   return 0;
+}
+____________________________________________________________
+Q20
+
+#include <stdio.h>
+#include <math.h>
+
+int decimalToOctal(int decimalnum)
+{
+    int octalnum = 0, temp = 1;
+
+    while (decimalnum != 0)
+    {
+    	octalnum = octalnum + (decimalnum % 8) * temp;
+    	decimalnum = decimalnum / 8;
+        temp = temp * 10;
+    }
+
+    return octalnum;
+}
+int main()
+{
+    int decimalnum;
+
+    printf("Enter a Decimal Number: ");
+    scanf("%d", &decimalnum);
+
+    printf("Equivalent Octal Number: %d", decimalToOctal(decimalnum));
+
+    return 0;
+}
+
+_______________________________________________________________________________
+Q21
+#include <stdio.h>
+#include <math.h>
+ 
+int main()
+{
+ 
+    long int octal, decimal = 0;
+    int i = 0;
+ 
+    printf("Enter any octal number: ");
+    scanf("%ld", &octal);
+    while (octal != 0)
+    {
+        decimal =  decimal +(octal % 10)* pow(8, i++);
+        octal = octal / 10;
+    }
+    printf("Equivalent decimal value: %ld",decimal);
+    return 0;
+}
+_______________________________________________________________________________
+Q23
+
+#include <math.h>
+#include <stdio.h>
+int convert(long long n);
+int main() {
+    long long n;
+    printf("Enter a binary number: ");
+    scanf("%lld", &n);
+    printf("%lld in binary = %d in decimal", n, convert(n));
+    return 0;
+}
+
+int convert(long long n) {
+    int dec = 0, i = 0, rem;
+    while (n != 0) {
+        rem = n % 10;
+        n /= 10;
+        dec += rem * pow(2, i);
+        ++i;
+    }
+    return dec;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
